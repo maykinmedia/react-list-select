@@ -5,7 +5,7 @@
   "keywords": [
     "react-component"
   ],
-  "main": "dist/index.js",
+  "main": "dist/react-list-select.js",
   "style": "index.css",
   "files": [
     "index.js",
@@ -40,8 +40,9 @@
   },
   "scripts": {
     "clean": "rm -f dist/*.js example/*.js",
+    "make": "babel ./*.es6 --out-dir dist/ && browserify $npm_package_config_browserify -e dist/index.js > dist/react-list-select.js",
     "make-example": "browserify $npm_package_config_browserify -e example/index.es6 > example/bundle.js",
-    "build": "babel ./*.es6 --out-dir dist/",
+    "build": "npm run make",
     "start": "npm run browser-sync & npm run watch; wait",
     "prepare": "npm run build",
     "postpublish": "npm run clean",
