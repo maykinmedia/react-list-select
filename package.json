@@ -7,14 +7,6 @@
   ],
   "main": "dist/react-list-select.js",
   "style": "index.css",
-  "files": [
-    "index.js",
-    "keys.js",
-    "List.js",
-    "ListItem.js",
-    "README.md",
-    "CHANGELOG.md"
-  ],
   "author": "Navaru",
   "contributors": [
     "Hawken Rives <hawkrives@gmail.com>"
