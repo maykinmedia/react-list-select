@@ -5,7 +5,7 @@
   "keywords": [
     "react-component"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "style": "index.css",
   "files": [
     "index.js",
@@ -39,9 +39,9 @@
     "browserify": "--debug -t [babelify] -e index.es6 --extension=.es6"
   },
   "scripts": {
-    "clean": "rm -f *.js example/*.js",
+    "clean": "rm -f dist/*.js example/*.js",
     "make-example": "browserify $npm_package_config_browserify -e example/index.es6 > example/bundle.js",
-    "build": "babel ./*.es6 --out-dir ./",
+    "build": "babel ./*.es6 --out-dir dist/",
     "start": "npm run browser-sync & npm run watch; wait",
     "prepare": "npm run build",
     "postpublish": "npm run clean",
